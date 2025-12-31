@@ -3,6 +3,9 @@
 # Default target executed when no arguments are given to make.
 all: help
 
+PYTHONPATH := src
+export PYTHONPATH
+
 # Define a variable for the test file path.
 TEST_FILE ?= tests/unit_tests/
 
@@ -65,4 +68,3 @@ help:
 	@echo 'tests                        - run unit tests'
 	@echo 'test TEST_FILE=<test_file>   - run all tests in file'
 	@echo 'test_watch                   - run unit tests in watch mode'
-
